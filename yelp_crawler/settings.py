@@ -67,6 +67,9 @@ ROBOTSTXT_OBEY = False
 #ITEM_PIPELINES = {
 #    'yelp_crawler.pipelines.YelpCrawlerPipeline': 300,
 #}
+ITEM_PIPELINES = {
+    'yelp_crawler.pipelines.YelpPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +91,7 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+SingleMONGODB_SERVER = "localhost"
+SingleMONGODB_PORT = 27017
+SingleMONGODB_DB = "yelp"

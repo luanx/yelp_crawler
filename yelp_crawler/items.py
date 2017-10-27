@@ -12,6 +12,7 @@ from scrapy import Field
 class YelpItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    _id = Field()
     name = Field()
     url = Field()
     price_range = Field()

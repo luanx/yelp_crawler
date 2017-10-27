@@ -31,5 +31,6 @@ class YelpSpider(Spider):
 
         response_selector = Selector(response)
         yelp_item['name'] = list_first_item(response_selector.xpath(u'//h1[contains(@class, "biz-page-title embossed-text-white shortenough")][1]/text()').extract())
+        yelp_item['url'] = list_first_item(response_selector.xpath(u'//span[@class="biz-website js-add-url-tagging"][1]/a/text()').extract())
 
         yield yelp_item
